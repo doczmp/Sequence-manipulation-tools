@@ -1,5 +1,5 @@
 # Sequence-manipulation-tools
-Just a few linux commands/softwares that I find useful in handling sequencing based data
+Just a few linux commands/softwares that I find useful in handling sequencing based data or files (bed etc)
 
 ## Sorting bed file 
 sort -k1,1 -k2,2n input.bed > input.sorted.bed
