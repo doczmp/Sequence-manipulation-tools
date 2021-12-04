@@ -1,5 +1,12 @@
 # Sequence-manipulation-tools
-Just a few linux commands/softwares that I find useful in handling sequencing based data or files (bed etc)
+Just a few linux commands or python based scripts that I tend to use a lot
+
+## Mutating a DNA sequence at a known rate
+You can use the script MutateDNAString.py to introduce n number of mutations in a given DNA sequence. For example if you give the code the DNA string 'AACA' and want 1 mutation in the string you might get 'TACA' as the string that is returned. Each base has an equal chance of getting picked to be mutated and a base can be converted to 3 other bases with equal probability. To write this script I modified code obtained from this fantastic resource https://hplgit.github.io/bioinf-py/doc/pub/html/main_bioinf.html to fit my needs.
+
+To run the code simply use the command and provide it with the string of your choice and the number of mutations you want to introduce:
+
+`python MutateDNAString.py --String AACA --nMut 2` 
 
 ## Sorting bed file 
 sort -k1,1 -k2,2n input.bed > input.sorted.bed
