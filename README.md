@@ -10,7 +10,7 @@ To run the code simply use the command and provide it with the string of your ch
 
 `python MutateDNAString.py --String AACA --nMut 2` 
 
-To mutate all sequences in a fasta file a given substitution rate, you will need BioPython. Also here please provide number of mutations you want as a percentage value and simply run the code:
+To mutate all sequences in a fasta file a given substitution rate, you will need BioPython to read the file. Also here please provide number of mutations you want as a percentage value and simply run the code:
 
 `python MutateDNAFasta.py --fasta test.fa --nMut 50 --output testOutput.fa` 
 
