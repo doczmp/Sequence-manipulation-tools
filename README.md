@@ -2,11 +2,18 @@
 Just a few linux commands or python based scripts that I tend to use a lot
 
 ## Mutating a DNA sequence at a known rate
-You can use the script MutateDNAString.py to introduce n number of mutations in a given DNA sequence. For example if you give the code the DNA string 'AACA' and want 1 mutation in the string you might get 'TACA' as the string that is returned. Each base has an equal chance of getting picked to be mutated and a base can be converted to 3 other bases with equal probability. To write this script I modified code obtained from this fantastic resource https://hplgit.github.io/bioinf-py/doc/pub/html/main_bioinf.html to fit my needs.
+You can use the script MutateDNAString.py to introduce n number of mutations in a given DNA sequence. For example if you give the code the DNA string 'AACA' and want 1 mutation in the string you might get 'TACA' as the string that is returned. Each base has an equal chance of getting picked to be mutated and a base can be converted to 3 other bases with equal probability. If you want to introduce multiple mutations (n>1), the code is written is such a way that each position can only be mutated once, but this is easily modifiable in the code. 
+
+To write this script I modified code obtained from this fantastic resource https://hplgit.github.io/bioinf-py/doc/pub/html/main_bioinf.html to fit my needs.
 
 To run the code simply use the command and provide it with the string of your choice and the number of mutations you want to introduce:
 
 `python MutateDNAString.py --String AACA --nMut 2` 
+
+To mutate all sequences in a fasta file a given substitution rate, you will need BioPython. Also here please provide number of mutations you want as a percentage value and simply run the code:
+
+`python MutateDNAFasta.py --fasta test.fa --nMut 50 --output testOutput.fa` 
+
 
 ## Sorting bed file 
 sort -k1,1 -k2,2n input.bed > input.sorted.bed
